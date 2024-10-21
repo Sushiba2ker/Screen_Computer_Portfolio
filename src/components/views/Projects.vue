@@ -164,7 +164,7 @@ export default {
       headerTitle: "Projects",
       headerSubtitle:
         'A complete lists of my projects. You can also see it in <a href="https://github.com/Sushiba2ker">GitHub</a>',
-      activeTab: "datas",
+      activeTab: "data-analysis",
       datas: [
         {
           title: "Stock Price Prediction using GRU",
