@@ -168,7 +168,7 @@ export default {
       datas: [
         {
           title: "Stock Price Prediction using GRU",
-          imgSrc: this.getImageSrc("predict.png"),
+          imgSrc: require("@/assets/images/projects/predict.png"),
           tags: ["Python", "Machine Learning"],
           desc: "Predicting stock prices using GRU.",
           siteLink: "https://www.kaggle.com/code/sushiba/stock-price-prediction-using-gru",
@@ -177,7 +177,7 @@ export default {
         {
           title: "🕷️Detection Malware Using Machine Learning Models",
           windowId: "",
-          imgSrc: this.getImageSrc("detection.png"),
+          imgSrc: require("@/assets/images/projects/detection.png"),
           tags: ["Machine Learning", "Python"],
           desc: "Developed a Python-based machine learning model to classify hand gesture images as rock, paper, or scissors.",
           siteLink: "https://www.kaggle.com/code/sushiba/detection-malware-using-machine-learning",
@@ -187,7 +187,7 @@ export default {
       webdevs: [
         {
           title: "420Share",
-          imgSrc: this.getImageSrc("detection.png"),
+          imgSrc: require("@/assets/images/projects/420Share.png"),
           tags: ["React", "Webtorrent"],
           desc: "A simple file sharing website using React and WebTorrent.",
           githubLink: "https://github.com/Sushiba2ker/420Share",
