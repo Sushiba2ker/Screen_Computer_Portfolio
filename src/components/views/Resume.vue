@@ -2,7 +2,7 @@
   <div style="display: flex; height: 100%; flex-direction: column">
     <nav class="download-bar">
       <a
-        href="/files/resume.pdf"
+        :href="googleDriveViewUrl"
         target="_blank"
         class="download"
         style="z-index: 10"
@@ -16,7 +16,7 @@
           <p style="margin-top: 2px">Open</p>
         </div>
       </a>
-      <a href="/files/resume.pdf" class="download" style="z-index: 10" download>
+      <a :href="googleDriveDownloadUrl" class="download" style="z-index: 10" download>
         <span style="display: flex" class="border">
           <img src="@/assets/icons/win95/download.png" class="icon-image" />
           <p style="margin-top: 2px">Download</p>
@@ -26,11 +26,32 @@
     <div class="frame" style="z-index: 99">
       <iframe
         class="frame"
-        src="https://drive.google.com/file/d/1kE9NADEMZcJ1UmnvqKgauwRRbpBffH1q/preview"
+        :src="googleDriveEmbedUrl"
       ></iframe>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      googleDriveFileId: '1kE9NADEMZcJ1UmnvqKgauwRRbpBffH1q',
+    }
+  },
+  computed: {
+    googleDriveViewUrl() {
+      return `https://drive.google.com/file/d/${this.googleDriveFileId}/view`
+    },
+    googleDriveDownloadUrl() {
+      return `https://drive.google.com/uc?export=download&id=${this.googleDriveFileId}`
+    },
+    googleDriveEmbedUrl() {
+      return `https://drive.google.com/file/d/${this.googleDriveFileId}/preview`
+    }
+  }
+}
+</script>
 
 <style scoped>
 .download {

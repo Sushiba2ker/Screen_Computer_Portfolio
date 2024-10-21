@@ -53,7 +53,7 @@ export default new Vuex.Store({
       {
         windowId: "resumeWindow",
         windowState: "close",
-        displayName: "Résumé",
+        displayName: "Resume",
         windowComponent: "window",
         windowContent: "resume",
         windowContentPadding: {
