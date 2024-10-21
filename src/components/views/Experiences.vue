@@ -188,12 +188,11 @@ export default {
         if (isHeaderImage) {
           imagePath = require("@/assets/icons/win95/" + imageName);
         } else {
-          imagePath = require("@/assets/images/experiences/professional/" +
-            imageName);
+          imagePath = require("@/assets/images/experiences/professional/" + imageName);
         }
       } catch (error) {
-        imagePath = require("@/assets/images/experiences/organizational/" +
-          imageName);
+        console.warn(`Image not found: ${imageName}`);
+        return null; // Hoặc trả về một hình ảnh mặc định
       }
       return imagePath;
     },
